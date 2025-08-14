@@ -87,6 +87,7 @@ body {
     max-width: 1200px;
     margin: auto;
     padding: 40px 0;
+    text-align: center;
 }
 
 h1, h2{
@@ -94,7 +95,7 @@ h1, h2{
 }
 
 .hero{
-    background: linear-gradient(to right, #0066cc, #004999);
+    background: linear-gradient(to right, red, #004999);
     color: white;
     text-align: center;
     padding: 80px 20px;
@@ -113,6 +114,11 @@ h1, h2{
     border-radius: 5px;
     margin-top: 20px;
 }
+.btn:hover {
+    /* padding: 12px 22px; */
+    background: #754704e6;
+    color: white;
+}
 
 .services-grid{
     display: grid;
@@ -121,7 +127,7 @@ h1, h2{
 }
 
 .card{
-    background: white;
+    background: aqua;
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0px 2px 8px rgba(0, 0, 0, 0, 1);
