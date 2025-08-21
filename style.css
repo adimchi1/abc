@@ -148,3 +148,74 @@ input, textarea{
     border: 1px solid #ddd;
     border-radius: 4px;
 }
+
+
+
+
+/* Hamburger menu button */
+.menu-toggle {
+    display: none;
+    font-size: 1.8rem;
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+/* Dropdown toggle button */
+.dropdown-toggle {
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: 0.8rem;
+    margin-left: 5px;
+}
+
+/* Mobile styles */
+@media screen and (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: blue;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        padding: 1rem 0;
+    }
+
+    .nav-links li {
+        text-align: center;
+        margin: 10px 0;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    .dropdown-menu {
+        position: static;
+        display: none;
+        background-color: #0066cc;
+        margin-top: 5px;
+    }
+}
+
+.nav-links.active {
+    display: flex;
+}
+
+.dropdown-menu.active {
+    display: block;
+}
+
+
+
+/* .nav-links.open {
+    display: flex;
+}
+
+.dropdown-menu.open {
+    display: block;
+} */

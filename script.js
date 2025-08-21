@@ -20,3 +20,37 @@ alert('your grade is E')
                 alert('invalid score')
             }
         }
+
+
+//         const hamburger = document.querySelector(".hamburger");
+// const navLinks = document.querySelector(".nav-links");
+// const dropdown = document.querySelector(".dropdown");
+// const dropbtn = document.querySelector(".dropbtn");
+
+// hamburger.addEventListener("click", () => {
+//     navLinks.classList.toggle("open");
+// });
+
+// // Toggle dropdown on mobile click
+// dropbtn.addEventListener("click", (e) => {
+//     e.preventDefault(); // Prevent default link behavior
+//     const dropdownMenu = dropbtn.nextElementSibling;
+//     dropdownMenu.classList.toggle("open");
+// });
+const menuToggle = document.getElementById('menu-toggle');
+const navLinks = document.getElementById('nav-links');
+const dropdownToggle = document.querySelector('.dropdown-toggle');
+const dropdownMenu = document.querySelector('.dropdown-menu');
+
+// Hamburger menu toggle
+menuToggle.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+    menuToggle.innerHTML = navLinks.classList.contains('active') ? '&#10005;' : '&#9776;'; // Hamburger ↔ Close
+});
+
+// Dropdown toggle
+dropdownToggle.addEventListener('click', (e) => {
+    e.preventDefault(); // Prevent link navigation
+    dropdownMenu.classList.toggle('active');
+    dropdownToggle.innerHTML = dropdownMenu.classList.contains('active') ? '&#9652;' : '&#9662;'; // Up ↔ Down arrow
+});
