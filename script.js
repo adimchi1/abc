@@ -48,9 +48,21 @@ menuToggle.addEventListener('click', () => {
     menuToggle.innerHTML = navLinks.classList.contains('active') ? '&#10005;' : '&#9776;'; // Hamburger ↔ Close
 });
 
-// Dropdown toggle
-dropdownToggle.addEventListener('click', (e) => {
-    e.preventDefault(); // Prevent link navigation
-    dropdownMenu.classList.toggle('active');
-    dropdownToggle.innerHTML = dropdownMenu.classList.contains('active') ? '&#9652;' : '&#9662;'; // Up ↔ Down arrow
+// // Dropdown toggle
+// dropdownToggle.addEventListener('click', (e) => {
+//     e.preventDefault(); // Prevent link navigation
+//     dropdownMenu.classList.toggle('active');
+//     dropdownToggle.innerHTML = dropdownMenu.classList.contains('active') ? '&#9652;' : '&#9662;'; // Up ↔ Down arrow
+// });
+
+
+
+// Dropdown toggle(s)
+document.querySelectorAll('.dropdown-toggle').forEach(toggle => {
+    toggle.addEventListener('click', (e) => {
+        e.preventDefault();
+        const dropdownMenu = toggle.nextElementSibling;
+        dropdownMenu.classList.toggle('active');
+        toggle.innerHTML = dropdownMenu.classList.contains('active') ? '&#9652;' : '&#9662;';
+    });
 });
