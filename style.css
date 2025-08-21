@@ -72,9 +72,17 @@ transition: background 0.3s;
 background-color: #555;
 }
 
-.dropdown:hover .dropdown-menu{
+/* .dropdown:hover .dropdown-menu{
     display: block;
+} */
+
+/* Only for desktop screens */
+@media screen and (min-width: 769px) {
+    .dropdown:hover .dropdown-menu {
+        display: block;
+    }
 }
+
 
 body {
     margin: 0;

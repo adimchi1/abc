@@ -38,31 +38,17 @@ alert('your grade is E')
 //     dropdownMenu.classList.toggle("open");
 // });
 const menuToggle = document.getElementById('menu-toggle');
-const navLinks = document.getElementById('nav-links');
+const navLinks = document.querySelector('.nav-links'); // Use querySelector
 const dropdownToggle = document.querySelector('.dropdown-toggle');
 const dropdownMenu = document.querySelector('.dropdown-menu');
 
-// Hamburger menu toggle
 menuToggle.addEventListener('click', () => {
     navLinks.classList.toggle('active');
-    menuToggle.innerHTML = navLinks.classList.contains('active') ? '&#10005;' : '&#9776;'; // Hamburger ↔ Close
+    menuToggle.innerHTML = navLinks.classList.contains('active') ? '&#10005;' : '&#9776;';
 });
 
-// // Dropdown toggle
-// dropdownToggle.addEventListener('click', (e) => {
-//     e.preventDefault(); // Prevent link navigation
-//     dropdownMenu.classList.toggle('active');
-//     dropdownToggle.innerHTML = dropdownMenu.classList.contains('active') ? '&#9652;' : '&#9662;'; // Up ↔ Down arrow
-// });
-
-
-
-// Dropdown toggle(s)
-document.querySelectorAll('.dropdown-toggle').forEach(toggle => {
-    toggle.addEventListener('click', (e) => {
-        e.preventDefault();
-        const dropdownMenu = toggle.nextElementSibling;
-        dropdownMenu.classList.toggle('active');
-        toggle.innerHTML = dropdownMenu.classList.contains('active') ? '&#9652;' : '&#9662;';
-    });
+dropdownToggle.addEventListener('click', (e) => {
+    e.preventDefault();
+    dropdownMenu.classList.toggle('active');
+    dropdownToggle.innerHTML = dropdownMenu.classList.contains('active') ? '&#9652;' : '&#9662;';
 });
